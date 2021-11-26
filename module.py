@@ -1,7 +1,7 @@
 ﻿def adding(palk,inimesed):
-    add=input("Кого добавить? (введите имя) => ")
+    add=input("Введите имя: ")
     inimesed.append(add)
-    add_zp=int(input("Какая у него зарплата? => "))
+    add_zp=int(input("Введите зарплату: "))
     palk.append(add_zp)
     return palk,inimesed
 def adding(palk,inimesed):
@@ -140,3 +140,30 @@ def nimi(palk,inimesed):
     return ots_nimi,ots_palk
     print()
     print()
+def kalk():
+    print("Это калькулятор) Поможет со сложными вычислениями")
+    while True:
+        print("Выберите действие которое хотите сделать:\n"
+              "Сложить: +\n"
+              "Вычесть: -\n"
+              "Умножить: *\n"
+              "Поделить: /\n"
+              "Выйти: q\n")
+        action = input("Действие: ")
+        if action == "q":
+            print("Выход из программы")
+            break
+        if action in ('+', '-', '*', '/'):
+            x = float(input("x = "))
+            y = float(input("y = "))
+            if action == '+':
+                print('%.2f + %.2f = %.2f' % (x, y, x+y))
+            elif action == '-':
+                print('%.2f - %.2f = %.2f' % (x, y, x-y))
+            elif action == '*':
+                print('%.2f * %.2f = %.2f' % (x, y, x*y))
+            elif action == '/':
+                if y != 0:
+                    print('%.2f / %.2f = %.2f' % (x, y, x/y))
+                else:
+                    print("Нельзя на 0 делить")

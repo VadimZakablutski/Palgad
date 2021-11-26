@@ -2,7 +2,7 @@ from module import*
 palk=[1200,2500,750,395,1200]
 inimesed=["A","B","C","D","E"]
 def palgad(p,i):
-    valik=input("Средняя зарплата - 1,\nМинимальная зарплата - 2,\nМаксимальная зарплата - 3,\nУдалить человека - 4,\nСортировка - 5, \nДобавить человека - 6\n")
+    valik=input("Средняя зарплата - 1,\nМинимальная зарплата - 2,\nМаксимальная зарплата - 3,\nУдалить человека - 4,\nСортировка - 5, \nДобавить человека - 6\nСвоя функция - 7.\n ")
     if valik=="1":
         kesk_palk=round(keskmine(palk),2)
         print("Keskmine palk on ",kesk_palk)
@@ -40,18 +40,7 @@ def palgad(p,i):
         print(palk)
         print("Добавлен элемент", inimesed[-1])
         print("С зарплатой", str(palk[-1])+'€')
-
-    elif valik == '7':
-        bog, bog_p, bed, bed_p = top3(palk,inimesed,n)
-        print("3 самых богатых")
-        for i in range(3):
-            print(b1[i],'получает',str(b2[i])+'€')
-        print()
-        print("3 самых бедных")
-        for i in range(3):
-            print(b4[i],'получает',str(b3[i])+'€')
-    elif valik=="4":
-        p=võrdlus()
-        print(result)
+    elif valik=="7":
+        x,y=kalk()
 while True:
     palgad(palk,inimesed)
