@@ -19,22 +19,6 @@ def kustuta(palk,inimesed):
         palk.append(uus_palk[i])
         inimesed.append(uus_inimesed[i])
     return uus_palk, uus_inimesed
-def sorteerimine(palk,inimesed):
-    abi_p=0
-    abi_i=""
-    n=len(inimesed)
-    for i in range(0,n-1):
-        for j in range(i+1,n):
-            if palk[i]>palk[j]:
-                abi_p=palk[i]
-                palk[i]=palk[j]
-                palk[j]=abi_p
-                abi_i=inimesed[i]
-                inimesed[i]=inimesed[j]
-                inimesed[j]=abi_i
-    return palk,inimesed
-    print()
-    print()
 def maksimum(palk,inimesed):
     m_palgad=[]
     nimed=[]
