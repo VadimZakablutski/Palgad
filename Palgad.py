@@ -9,13 +9,13 @@ def palgad(p,i):
         print()
         print()
     elif valik=="2":
-        m_palgad,nimi=minimum(palk,inimesed)
+        m_palgad,nimi=min(palk,inimesed)
         for n in nimi:
             print(m_palgad[0], " будет получено ",n)
             print()
             print()
     elif valik=="3":
-        max_palk,kto=maksimum(palk,inimesed)
+        max_palk,kto=maks(palk,inimesed)
         print("Максимальная зарплата ", max_palk, " будет получено ",kto)
         print()
         print()

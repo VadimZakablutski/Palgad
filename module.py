@@ -19,7 +19,7 @@ def kustuta(palk,inimesed):
         palk.append(uus_palk[i])
         inimesed.append(uus_inimesed[i])
     return uus_palk, uus_inimesed
-def maksimum(palk,inimesed):
+def maks(palk,inimesed):
     m_palgad=[]
     nimed=[]
     max_palk=palk[0]
@@ -41,7 +41,7 @@ def maksimum(palk,inimesed):
     return m_palgad, nimed
     print()
     print()
-def minimum(palk,inimesed):
+def min(palk,inimesed):
     m_palgad=[]
     nimed=[]
     min_palk=palk[0]
