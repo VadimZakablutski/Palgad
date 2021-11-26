@@ -19,14 +19,11 @@ def palgad(p,i):
         print("Максимальная зарплата ", max_palk, " будет получено ",kto)
         print()
         print()
-    elif valik=="4":                                       
-        p,i=delete(palk,inimesed)
-        print(palk,inimesed)
-        if len(inimesed)==0:
-            print("Tühi list")
-        else:
-            for i in range(len(inimesed)):
-                print(inimesed[i]," saab kätte ", palk[i])
+    elif valik =="4":
+        p,i=kustuta(palk,inimesed)
+        print("Удалены данные, где зарплата ниже средней")
+        for i in range(len(p)):
+            print(inimesed[i],"получает", str(palk[i])+'€')
     elif valik=="5":
         p,i=sorteerimine(palk,inimesed)
         for i in range(len(inimesed)):

@@ -1,10 +1,4 @@
 ﻿def adding(palk,inimesed):
-    add=input("Введите имя: ")
-    inimesed.append(add)
-    add_zp=int(input("Введите зарплату: "))
-    palk.append(add_zp)
-    return palk,inimesed
-def adding(palk,inimesed):
     add=input("Имя человека:  ")
     inimesed.append(add)
     add_palk=int(input("Зарплата человека:  " ))
@@ -12,33 +6,19 @@ def adding(palk,inimesed):
     return palk,inimesed
     print()
     print()
-def delete(palk, inimesed):
-    x=input("Имя пользователя написано буквами - 1 или цифрами - 2? ")
-    if x=="2":
-        i=int(input("Введите номер: "))
-        palk.pop(i-1)
-        inimesed.pop(i-1)
-    elif x=="1":
-        i=0
-        keda=input("Введите имя: ")
-        n=len(inimesed)
-        while i<n:
-            if keda==inimesed[i]:
-                inimesed.pop(i)
-                palk.pop(i)
-                n=len(inimesed)
-            else:
-                i+=1
-def kustutamine():
-    keskmin = keskmine(palk)
-    print(keskmin)
-    for i in palk:
-        if i < kesk:
-            index = palk.index(i)
-            palk.pop(index)
-            inimesed.pop(index)
-            print()
-            print()
+def kustuta(palk,inimesed):
+    uus_palk = []; uus_inimesed = []
+    kesk = keskmine(palk)
+    for p in palk:
+        if p > kesk:
+            nr = palk.index(p)
+            uus_palk.append(p)
+            uus_inimesed.append(inimesed[nr])
+    palk.clear();inimesed.clear()
+    for i in range(len(uus_palk)):
+        palk.append(uus_palk[i])
+        inimesed.append(uus_inimesed[i])
+    return uus_palk, uus_inimesed
 def sorteerimine(palk,inimesed):
     abi_p=0
     abi_i=""
@@ -53,23 +33,6 @@ def sorteerimine(palk,inimesed):
                 inimesed[i]=inimesed[j]
                 inimesed[j]=abi_i
     return palk,inimesed
-    print()
-    print()
-def nimi(palk,inimesed):
-    ots_nimi=[]
-    ots_palk=[]
-    palk_keda=0
-    keda=input("Введите имя: ")
-    n=len(inimesed)
-    for j in range(n):
-        if inimesed[j]==keda:
-            palk_keda=palk[j]
-            ots_nimi.append(inimesed[j])
-            ots_palk.append(palk_keda)
-            print()
-            print()
-        else:pass
-    return ots_nimi,ots_palk
     print()
     print()
 def maksimum(palk,inimesed):
@@ -121,23 +84,6 @@ def keskmine(palk):
         summa+=p
     k=summa/n
     return k
-    print()
-    print()
-def nimi(palk,inimesed):
-    ots_nimi=[]
-    ots_palk=[]
-    palk_keda=0
-    keda=input("Введите имя: ")
-    n=len(inimesed)
-    for j in range(n):
-        if inimesed[j]==keda:
-            palk_keda=palk[j]
-            ots_nimi.append(inimesed[j])
-            ots_palk.append(palk_keda)
-            print()
-            print()
-        else:pass
-    return ots_nimi,ots_palk
     print()
     print()
 def kalk():
