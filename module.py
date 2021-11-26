@@ -1,15 +1,9 @@
-﻿def topbogat(palk,inimesed):
-    top,inimes=sorteerimine(palk,inimesed)
-    k= int(input("Выберите значение топ: " ))
-    palk.reverse()
-    inimesed.reverse()
-    for i in range(0,k,1):
-        print(palk[i])
-        print(inimesed[i])
-    return palk, inimesed
-    print()
-    print()
-
+﻿def adding(palk,inimesed):
+    add=input("Кого добавить? (введите имя) => ")
+    inimesed.append(add)
+    add_zp=int(input("Какая у него зарплата? => "))
+    palk.append(add_zp)
+    return palk,inimesed
 def adding(palk,inimesed):
     add=input("Имя человека:  ")
     inimesed.append(add)
@@ -19,31 +13,22 @@ def adding(palk,inimesed):
     print()
     print()
 def delete(palk, inimesed):
-    x=input("Имя человека: ")
-    if x=="Номер":
-        i=int(input("Выбери номер "))
+    x=input("Имя пользователя написано буквами - 1 или цифрами - 2? ")
+    if x=="2":
+        i=int(input("Введите номер: "))
         palk.pop(i-1)
         inimesed.pop(i-1)
-        print()
-        print()
-    elif x=="Имя":
+    elif x=="1":
         i=0
-        keda=input("Напишите имя:  ")
+        keda=input("Введите имя: ")
         n=len(inimesed)
         while i<n:
             if keda==inimesed[i]:
                 inimesed.pop(i)
                 palk.pop(i)
                 n=len(inimesed)
-                print()
-                print()
             else:
                 i+=1
-            print()
-            print()
-    return palk, inimesed
-    print()
-    print()
 def kustutamine():
     keskmin = keskmine(palk)
     print(keskmin)
@@ -136,5 +121,22 @@ def keskmine(palk):
         summa+=p
     k=summa/n
     return k
+    print()
+    print()
+def nimi(palk,inimesed):
+    ots_nimi=[]
+    ots_palk=[]
+    palk_keda=0
+    keda=input("Введите имя: ")
+    n=len(inimesed)
+    for j in range(n):
+        if inimesed[j]==keda:
+            palk_keda=palk[j]
+            ots_nimi.append(inimesed[j])
+            ots_palk.append(palk_keda)
+            print()
+            print()
+        else:pass
+    return ots_nimi,ots_palk
     print()
     print()
