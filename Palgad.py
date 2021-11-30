@@ -4,33 +4,18 @@ inimesed=["A","B","C","D","E"]
 def palgad(p,i):
     valik=input("Средняя зарплата - 1,\nМинимальная зарплата - 2,\nМаксимальная зарплата - 3,\nУдалить человека - 4,\nДобавить человека - 5\nСвоя функция - 6.\n ")
     if valik=="1":
-        kesk_palk=round(keskmine(palk),2)
-        print("Keskmine palk on ",kesk_palk)
-        print()
-        print()
+        keskmine()
     elif valik=="2":
-        m_palgad,nimi=min(palk,inimesed)
-        for n in nimi:
-            print(m_palgad[0], " будет получено ",n)
-            print()
-            print()
+        min()
     elif valik=="3":
-        max_palk,kto=maks(palk,inimesed)
-        print("Максимальная зарплата ", max_palk, " будет получено ",kto)
-        print()
-        print()
+        maks()
     elif valik =="4":
         p,i=kustuta(palk,inimesed)
         print("Удалены данные, где зарплата ниже средней")
         for i in range(len(p)):
             print(inimesed[i],"получает", str(palk[i])+'€')
     elif valik=="5":
-        i=adding(palk,inimesed)
-        print("Обновлённые списки: ")
-        print(inimesed)
-        print(palk)
-        print("Добавлен элемент", inimesed[-1])
-        print("С зарплатой", str(palk[-1])+'€')
+        adding()
     elif valik=="6":
         x,y=kalk()
 while True:
