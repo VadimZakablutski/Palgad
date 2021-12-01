@@ -45,7 +45,7 @@ def min():
 	print("Самая маленькая зарплата у "+inimesed[b])
 def keskmine():
     """
-    Программа проверяет списки и выводит среднюю зарплату
+    Программа проверяет списки и выводит на экран среднюю зарплату
     rtype var:int
     """
     sum=0
@@ -58,5 +58,5 @@ def keskmine():
         kesk=i(p.index(keskm))
         return keskm
     else:
-        print("Kesk on puudub")
+        print("Нет средней зарплаты")
         return keskm
