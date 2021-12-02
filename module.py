@@ -8,7 +8,7 @@
 	with open("login.txt", "a") as inimesed:
 		inimesed.write(nimi+"\n")	
 	with open("palgad.txt", "a") as palgad:
-		palgad.write(palga+"\n")
+		palgad.write(palk+"\n")
 def maks():
      #Программа проверяет списки и выводит на экран человека с максимальной зарплатой
     #rtype var: int
@@ -34,9 +34,10 @@ def min():
 		for strok in f1:
 			palgad.append(strok.strip())
 	inimesed=[]
-	with open ("login.txt", "r") as inimene:
-		for stroka in f:
-			inimesed.append(stroka.strip())
+	f=open("login.txt", "r")
+	inimesed=[]
+	for stroka in f:
+		inimesed.append(stroka.strip())
 	zp=palgad.copy()
 	zp.sort()
 	zp.reverse()
